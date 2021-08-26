@@ -1,29 +1,33 @@
 <template>
-  <div id="app">
-    modify
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+ <div id="app">
+     <h1>轮播</h1>
+   <Banner :img-data="items"></Banner>
+ </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+ import Banner from "./views/Banner";
 
 export default {
-  name: 'App',
+  data(){
+    return{
+      items:[
+          require('./assets/imgs/1.jpg'),
+          require('./assets/imgs/2.jpg'),
+          require('./assets/imgs/3.jpg'),
+          require('./assets/imgs/4.jpg')
+      ]
+    }
+
+},
   components: {
-    HelloWorld
+   Banner
+
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "./assets/css/index.css";
 </style>
