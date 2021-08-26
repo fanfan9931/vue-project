@@ -4,7 +4,7 @@
         <div class="prev" @click="prevPic">←</div>
         <div class="next" @click="nextPic">→</div>
         <ul>
-           <li v-for="(v,i) in imgData" :class="{'active':cur == i}" @click="changePic(i)"></li>
+           <li  v-for="(v,i) in imgData" :class="{'active':cur == i}" :key="i" @click="changePic(i)"></li>
         </ul>
     </div>
 </template>
