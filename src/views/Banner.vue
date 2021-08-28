@@ -51,6 +51,9 @@
         },
         mounted() {
             this.autoplay()
+        },
+        destroyed() {
+            clearInterval(this.timer)
         }
     }
 </script>
