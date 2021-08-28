@@ -2,8 +2,10 @@
  <div id="app">
      <h1>轮播</h1>
      <Banner :img-data="items"></Banner>
-     <Navgatior :navData="navData"></Navgatior>
-     <router-view></router-view>
+    <div class="navBox">
+        <Navgatior :navData="navData"></Navgatior>
+        <router-view></router-view>
+    </div>
  </div>
 </template>
 
